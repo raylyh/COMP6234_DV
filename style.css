@@ -1,0 +1,150 @@
+/*
+    Colors:
+    Blueish:
+    #84CABF
+    #4E9583
+    #458B7F
+    #376E73
+    Yellowish:
+    #F6B039
+    #FF9326
+    Reddish:
+    #F63939
+*/
+
+
+body {
+  font-family: "Noto Sans HK";
+  color: #343434;
+  font-weight: 100;
+  font-size: 18px;
+  max-width: 960px;
+  margin: auto;
+}
+
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+    /* color: #376E73; */
+}
+
+h2.title {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+h2.subtitle {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 0px;
+}
+
+.description {
+    color: "black";
+}
+
+.source {
+    font-size: 12px;
+    text-anchor: end;
+    text-align: right;
+}
+
+.tooltip {
+    display: block;
+    margin: 0;
+    text-align: start;
+    box-sizing: border-box;
+}
+
+div.tooltip_container {
+    width: 800px;
+}
+
+div.image-container {
+    position: relative;
+    text-align: center;
+}
+
+div.image-container2 {
+    position: relative;
+    text-align: right;
+}
+
+div.top-left {
+    position: absolute;
+    font-size: 20px;
+    top: 20px;
+    left: 0px;
+    text-align: left;
+}
+
+div.left {
+    position: absolute;
+    font-size: 36px;
+    top: 75px;
+    left: 25px;
+    text-align: left;
+}
+
+div.viz {
+    margin-top: 20px;
+    width: 1500px;
+}
+
+div.description {
+    width: 800px;
+}
+
+div.tooltip_container {
+	display: inline-block;
+}
+
+.test {
+    color: #84CABF;
+}
+
+.test0 {
+    color: #4E9583;
+}
+
+.test1 {
+    color: #458B7F;
+}
+
+.test2 {
+    color: #376E73;
+}
+
+.test3 {
+    color: #FF9326;
+}
+
+.test4 {
+    color: #F6B039;
+}
+
+
+div.bar {
+    display: inline-block; /* The elements can sit next to each other */
+    width: 50px;
+    height: 75px;   /* We'll override this later */
+    background-color: teal;
+    margin : 2px; /* This adds spaces between our bars so we can tell them apart */
+}
+
+div.cost {
+    display: inline-block; /* The elements can sit next to each other */
+    width: 25px;
+    height: 75px;   /* We'll override this later */
+    background-color: red;
+    margin : 2px; /* This adds spaces between our bars so we can tell them apart */
+}
+
+div.calorie {
+    display: inline-block; /* The elements can sit next to each other */
+    width: 25px;
+    height: 75px;   /* We'll override this later */
+    background-color: blue;
+    margin : 2px; /* This adds spaces between our bars so we can tell them apart */
+}
