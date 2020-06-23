@@ -4,37 +4,25 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="author" content="Ray Leung">
-        <title>Assignment **DO**</title>
+        <title>Data Story - Recycling</title>
         <script src="https://d3js.org/d3.v5.min.js"></script>            <!-- This is a link to the D3 library -->
         <link href="https://fonts.googleapis.com/css?family=Noto+Sans+HK:thin,regular,bold&display=Roboto" rel="stylesheet">
         <link href="style.css" type="text/css" rel="stylesheet">         <!-- This is your style sheet -->
     </head>
-    <!--Notes to myself
-    <p> Clear, purposeful charts and graphics with good design principles
-    Clarity of narrative (10)
-    Appropriate choice of visualisations (10)
-    Limited chart junk (4)
-    Key data emphasised (4)
-    Appropriate uses of colour (4)
-    Visualisations titled and captioned (4)
-    Supporting narrative text (3)
-    Grammar, spelling & presentation (3)
-    Clear structure and flow to content(4)
-    Appropriate use of interactivity (4)
-    </p>
-    -->
+
     <body>
         <div class="image-container">
             <img src="data/Waste.jpg" width="960"></img>
         </div>
         <h1>Are we recycling enough?</h1>
-
+        <!--map visualisation on world waste-->
         <div class="viz" id="worldmap">
             <h2 class="title">A quick overview of the world's waste generation</h2>
             <h2 class="subtitle">Municipal solid waste generation per capita per year (2016)</h2>
             <p>(kg per capita per year)</p>
             <div class="tooltip_container" id="tooltip">
                 <svg class="container-left" id="map">
+                	<!--the zoom icon on the bottom right corner-->
                     <g transform="translate(750, 400) scale(0.07 0.07)">
                         <path fill="#DDDDDD" xmlns="http://www.w3.org/2000/svg" d="M364.8,299.55c46.3-75.8,36.9-176.3-28.6-241.9c-76.8-76.8-201.8-76.8-278.6,0s-76.8,201.8,0,278.5    c65.5,65.5,166,74.9,241.9,28.6L412,477.25c18,18,47.3,18,65.3,0s18-47.3,0-65.3L364.8,299.55z M295.5,295.55    c-54.4,54.4-142.8,54.4-197.1,0c-54.4-54.4-54.4-142.8,0-197.1c54.4-54.4,142.8-54.4,197.1,0    C349.8,152.75,349.8,241.15,295.5,295.55z M220,171.95h59.4v45.3H220v59.4h-45.3v-59.4h-59.3v-45.3h59.4v-59.4h45.3v59.4H220z"/>
                     </g>
@@ -63,10 +51,12 @@
                 <br>
             </div>
         </div>
+        <!--first visualisation on UK's / England's waste-->
         <div class="viz" id="viz_eng">
             <h2 class="title">A closer look in England</h2>
             <h2 class="subtitle">Household waste generation and
                 recycling in England from 2000 to 2018</h2>
+            <!--placeholder for the d3 plot-->
             <svg></svg>
             <div class="description">
                 <p>
@@ -94,6 +84,7 @@
                     in a year.</div>
             </div>
         </div>
+        <!--second visualisation on england's recycling trend-->
         <div class="viz" id="viz_recycle">
             <h2 class="subtitle">The recycling trend in England over the period of 2000 to 2018</h2>
             <svg></svg>
@@ -114,7 +105,8 @@
                 <br>
             </div>
         </div>
-        <div id="viz_breakdown">
+        <!--viz on breakdown of 2018 England Waste-->
+        <div class="viz" id="viz_breakdown">
             <h2 class="subtitle">Breakdown of the recycling stream in England in 2018</h2>
             <svg></svg>
             <div class="description">
@@ -134,6 +126,7 @@
                 </p><br>
             </div>
         </div>
+        <!--touch up on recycling what-to-do-->
         <div>
             <h2 class="title">How can I do more?</h2>
             <div class="image-container2">
@@ -148,11 +141,6 @@
                     Plan meals and be careful not
                     to over-purchase<br>
             </div>
-
-
-
-
-
         </div>
     </body>
     <script src="d3_assignment.js"></script>

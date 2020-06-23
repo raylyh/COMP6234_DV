@@ -1,10 +1,10 @@
 // Yu Hong Leung: 2020 Jan 04
-// Broweser supports ES6
+// Browser supports ES6
 // D3 v5
 
 Promise.all([
     d3.csv("https://gist.githubusercontent.com/raylyh/0f8f96afa5516966ada57c25fa5ee041/raw/136d13e9719077fec8700a4e69f09577db30ed59/england0018.csv", function(d) {
-        // data for england
+        // data for england waste and recycling rate
         return {
             year: new Date(+d["Year"], 0, 1),
             // store waste in kg
@@ -28,6 +28,7 @@ Promise.all([
         };
     }),
     d3.csv("https://gist.githubusercontent.com/raylyh/91b07d5f6c01f5ed4f9d749b36c94232/raw/f2663b27fc131362d23515b5fb7aa321b177ee10/uk_population.csv", function(d) {
+        // data for england and the uk population
         return {
             year_str: d["Code/Year"],
             year: new Date(d["Code/Year"].slice(4), 0, 1),
@@ -38,6 +39,7 @@ Promise.all([
     // data for world map
     d3.json("https://gist.githubusercontent.com/raylyh/807f50f38e25a091c2d9f968661144d5/raw/cd79321be7b2ba561a9c56c61fc6b6ba083ee222/world.geojson"),
     d3.csv("https://gist.githubusercontent.com/raylyh/cce2a9008ce10b2b40e0fdcf360d0c89/raw/f89ba7934d3f6fa238e41303f805d5ce471da323/breakdown2018.csv", function(d) {
+        // data for waste breakdown in recycling stream in the uk
         return {
             name: d["name"],
             group: d["parent"],
@@ -45,9 +47,7 @@ Promise.all([
         }
     })
 ]).then(function(files) {
-    // data for england recycling rate
     let data_england = files[0];
-    // data for world
     let data_world = files[1];
     let population = files[2];
     let map_world = files[3];
@@ -167,7 +167,7 @@ Promise.all([
 
         projection.fitSize([width, height], map);
 
-        // legend
+        // legend for the map
         let svg_legend = d3.select("#worldmap")
             .select("#legend")
             .attr("width", 400)
@@ -203,7 +203,7 @@ Promise.all([
             .attr("text-anchor", "left")
             .style("dominant-baseline", "baseline");
 
-        // source for the chart
+        // source for the chart's data
         d3.select("#worldmap")
             .select("#source")
             .attr("width", width)
@@ -359,7 +359,7 @@ Promise.all([
             .style("dominant-baseline", "baseline");
 
 
-        // source for the chart
+        // source for the chart's data
         svg.append("text")
             .attr("x", width + margin.left)
             .attr("y", height + margin.bottom)
